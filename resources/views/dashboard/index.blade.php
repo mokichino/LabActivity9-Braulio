@@ -25,6 +25,18 @@
         </div>
     @endif
 
+    <div class="grid gap-4 lg:grid-cols-3">
+    <x-panel title="Next Upcoming Vaccination">
+        @if ($next)
+            <p class="text-lg font-semibold text-blue-700">{{ $next->patient_name }}</p>
+            <p>{{ $next->vaccine }} – {{ $next->dose }}</p>
+            <p class="text-sm text-slate-500">{{ $next->purok }} · {{ $next->scheduled_at->format('l, M d, Y') }}</p>
+        @else
+            <p class="text-slate-500">No upcoming vaccinations.</p>
+        @endif
+    </x-panel>
+
+    <div class="lg:col-span-2">
     <x-panel title="Overdue Residents">
         <ul class="divide-y">
             @forelse ($alerts as $alert)
@@ -40,4 +52,6 @@
         </ul>
         <a href="/schedule" class="inline-block mt-3 text-sm text-blue-700 hover:underline">View full schedule →</a>
     </x-panel>
+    </div>
+    </div>
 @endsection

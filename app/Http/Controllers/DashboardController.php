@@ -17,11 +17,12 @@ class DashboardController extends Controller
             ['label' => 'Overdue', 'value' => $schedules->where('status', 'Overdue')->count()],
         ];
         $alerts = $schedules->where('status', 'Overdue');
+        $next = $schedules->where('status', 'Scheduled')->first();
 
         // vaccines the health center ran out of
         $outOfStock = ['MMR'];
 
-        return view('dashboard.index', compact('title', 'stats', 'schedules', 'alerts', 'outOfStock'));
+        return view('dashboard.index', compact('title', 'stats', 'schedules', 'alerts', 'outOfStock', 'next'));
     }
 
     public function schedule()
