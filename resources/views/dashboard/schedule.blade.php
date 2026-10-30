@@ -8,7 +8,7 @@
     <x-panel title="All Schedules">
         <div class="overflow-x-auto">
             <table class="w-full text-left text-sm">
-                <thead class="border-b text-slate-500">
+                <thead class="bg-blue-100 text-blue-900">
                     <tr>
                         <th class="p-2">#</th>
                         <th class="p-2">Patient</th>
@@ -21,7 +21,7 @@
                 </thead>
                 <tbody>
                     @forelse ($schedules as $s)
-                        <tr class="{{ $loop->odd ? 'bg-slate-50' : 'bg-white' }}">
+                        <tr class="{{ $loop->odd ? 'bg-blue-50' : 'bg-white' }}">
                             <td class="p-2">{{ $loop->iteration }}</td>
                             <td class="p-2">{{ $s->patient_name }}</td>
                             <td class="p-2 hidden md:table-cell">{{ $s->purok }}</td>

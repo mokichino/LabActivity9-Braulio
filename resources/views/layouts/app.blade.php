@@ -6,9 +6,9 @@
     <title>@yield('title', 'Bakuna Tracker')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen flex flex-col bg-slate-100 text-slate-800">
+<body class="min-h-screen flex flex-col bg-blue-50 text-slate-800">
 
-    <nav class="bg-emerald-700 text-white">
+    <nav class="bg-blue-700 text-white">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <a href="/dashboard" class="text-lg font-bold">💉 Bakuna Tracker</a>
 

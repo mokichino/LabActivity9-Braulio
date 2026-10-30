@@ -5,7 +5,7 @@
 @section('content')
 <form method="POST" action="/login" class="max-w-sm mx-auto mt-10 space-y-4 p-6 bg-white rounded-lg shadow">
     @csrf
-    <h1 class="text-xl font-bold text-emerald-700 text-center">Health Worker Sign in</h1>
+    <h1 class="text-xl font-bold text-blue-700 text-center">Health Worker Sign in</h1>
 
     <div>
         <label for="email" class="block text-sm mb-1">Email</label>
@@ -21,6 +21,6 @@
         @error('password') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
     </div>
 
-    <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded p-2">Sign in</button>
+    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded p-2">Sign in</button>
 </form>
 @endsection

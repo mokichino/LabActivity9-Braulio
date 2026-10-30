@@ -38,6 +38,6 @@
                 <li class="py-2 text-slate-500">Nobody is overdue.</li>
             @endforelse
         </ul>
-        <a href="/schedule" class="inline-block mt-3 text-sm text-emerald-700 hover:underline">View full schedule →</a>
+        <a href="/schedule" class="inline-block mt-3 text-sm text-blue-700 hover:underline">View full schedule →</a>
     </x-panel>
 @endsection
