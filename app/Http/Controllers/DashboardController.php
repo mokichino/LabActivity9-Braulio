@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $next = $schedules->where('status', 'Scheduled')->first();
 
         // vaccines the health center ran out of
-        $outOfStock = ['MMR'];
+        $outOfStock = ['Anti-Flu'];
 
         return view('dashboard.index', compact('title', 'stats', 'schedules', 'alerts', 'outOfStock', 'next'));
     }
